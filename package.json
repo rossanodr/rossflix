@@ -15,15 +15,14 @@
     "react-slick": "^0.27.1",
     "styled-components": "^5.1.1"
   },
-  "start": "node ./server.js",
-  "dev": "concurrently \"react-scripts start\" \"node ./server.js\"",
-  "build": "react-scripts build",
-  "test": "react-scripts test",
-  "eject": "react-scripts eject",
-  "server:static": "json-server --watch ./src/data/db.json --port 8080",
-  "server": "node ./server.js",
-},
-
+  "scripts": {
+    "server": "json-server --watch db.json --port 8080",
+    "dev": "concurrently \"react-scripts start\" \"npm run\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
